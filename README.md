@@ -53,6 +53,6 @@ Deployment & Tools: TailwindCSS Next.js
 ## 📬 Contact
 If you are looking for a software engineer who prioritizes scalability, reliability, and clean architecture, I would love to connect.
 
-LinkedIn: [Your LinkedIn Profile Link]
-Email: [Your Email Address]
-Portfolio: [Link to Live Site]
+LinkedIn: https://www.linkedin.com/in/taylor-williams-64603846/
+Email: taylordwilliams90@gmail.com
+
