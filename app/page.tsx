@@ -107,10 +107,10 @@ export default function PortfolioPage() {
               Currently focused on building high-performance cloud applications.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-zinc-200 transition-colors">
+              <a href="mailto:taylordwilliams90@gmail.com" className="px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-zinc-200 transition-colors">
                 Contact Me
               </a>
-              <a href="#" className="px-6 py-3 bg-zinc-800 text-white rounded-full font-medium hover:bg-zinc-700 transition-colors">
+              <a href="https://docs.google.com/document/d/1-rIeZgf6xXkM1qFWlUyQdB4ceZ9jEayXiesB_Uqaahs/edit?usp=sharing" target="_blank" className="px-6 py-3 bg-zinc-800 text-white rounded-full font-medium hover:bg-zinc-700 transition-colors">
                 View Resume
               </a>
             </div>
