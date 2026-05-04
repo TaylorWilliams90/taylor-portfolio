@@ -1,0 +1,60 @@
+﻿{"name": "read_file", "arguments": {"filepath": "public/Resume.txt"}}
+Taylor Williams
+	
+
+(971) 227-9458
+taylordwilliams90@gmail.com
+	EXPERIENCE
+
+
+1. Cornerstone Technologies LLC, American Fork — Lead Software Engineer (Platform Architecture)
+	MAY 2021 - PRESENT
+	* Architected a high-throughput event application using PHP Laravel, increasing backend customization efficiency by 100% and enabling rapid deployment of multi-tenant event streams.
+	* Managed full-stack cloud infrastructure using AWS Elastic Beanstalk throughout the entire tenure, overseeing automated deployments from GitHub repositories to multi-tier environments.
+	* Established a rigorous deployment pipeline utilizing Sandbox environments for comprehensive testing and validation before final Production server deployments, ensuring 100% system uptime during live events.
+	* Engineered a modular template logic layer (Blade/Laravel) that reduced system overhead and development lifecycle time by 20% for large-scale digital events.
+	* Developed and optimized RESTful APIs to handle real-time data synchronization between the core application and interactive event components.
+	* Managed the full system lifecycle using Monday.com and GitHub (CI/CD), ensuring code quality through rigorous peer reviews and architectural audits.
+
+2. Westech Equipment 
+	Web Project Manager / Lead Developer / Marketing Manager
+	MARCH 2019 - MAY 2021
+	* Successfully develop and modify Zencart sites using HTML, CSS, JavaScript, jQuery, Bootstrap, PHP, MySQL
+	* Manage Google Ads, Bing, and Shopping ads
+	* Run Projects and Tasks through Asana
+	* Manage Godaddy and DigitalOcean servers
+3. Dude DownShift Designs
+	Owner/Manager/Developer/Freelancer
+	2016 - 2020. 
+	* I have completed over 15 different Web Projects for my clients.
+	* WordPress, Shopify, OpenCart, Zen Cart, Big Commerce, Volusion, and  Bitrix 24.
+4. Active Care
+	Developer/Salesforce Admin
+	NOVEMBER 2017 - JULY 2018
+	* Successfully develop and modify websites using HTML, CSS, JavaScript, jQuery, C#, ASP.NET, SQL and Bootstrap
+	* Salesforce administrator working closely with the development team
+	* Manage multiple projects at once
+	* Scrum Master inside of a team of Developers and Operations 
+	* Ran Agile Projects through Visual Studio TFS
+5. Action Sports Group
+	Developer/Project Manager
+	JULY 2016 - NOVEMBER 2017
+	* Joggled developing, backend eCommerce, and SEO for over 20 different websites
+	* Mastered a professional understanding of Adobe Creative Suite
+	* Manage Web hosting servers, domains, SSL’s, and emails 
+	SKILLS
+Years   Skill Learned
+12+        HTML5 & CSS3
+8+          JavaScript
+8+          MySQL & PHP
+7+          cPanel, Lynx, and             Apache Servers
+5+         GitHub
+5+          Project and Full Web Management
+3             Vuejs and Reactjs
+4+          AWS Elastic Beanstalk
+
+
+LANGUAGES
+English and Spanish
+EDUCATION
+BYU Idaho — Bachelor's Degree - Web Development & Design.
