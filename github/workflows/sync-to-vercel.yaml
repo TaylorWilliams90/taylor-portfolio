@@ -1,0 +1,39 @@
+name: Sync to Vercel Repo
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source repo (local app)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clone target repo (Vercel)
+        run: |
+          git clone https://x-access-token:${{ secrets.VERCEL_REPO_TOKEN }}@github.com/TaylorWilliams90/taylor-resume.git vercel-repo
+
+      - name: Copy all files to target repo
+        run: |
+          # Remove everything in target except .git
+          find vercel-repo -mindepth 1 -maxdepth 1 -not -name '.git' -exec rm -rf {} +
+
+          # Copy everything from source except .git and .github
+          rsync -av --exclude='.git' --exclude='.github' ./ vercel-repo/
+
+      - name: Commit and push to Vercel repo
+        run: |
+          cd vercel-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          # Only commit if there are actual changes
+          git diff --staged --quiet || git commit -m "Sync from local app repo: ${{ github.sha }}"
+          git push origin HEAD
