@@ -18,7 +18,7 @@ jobs:
 
       - name: Clone target repo (Vercel)
         run: |
-          git clone https://x-access-token:${{ secrets.VERCEL_REPO_TOKEN }}@github.com/TaylorWilliams90/taylor-resume.git vercel-repo
+          git clone https://x-access-token:${{ secrets.VERCEL_REPO_TOKEN }}@github.com/taylorwilliams90/taylor-resume.git vercel-repo
 
       - name: Copy all files to target repo
         run: |
