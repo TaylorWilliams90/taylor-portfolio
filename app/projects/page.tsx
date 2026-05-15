@@ -35,6 +35,33 @@ const projects = [
   },
 ];
 
+const devopsProjects = [
+  {
+    num: "01",
+    name: "CI/CD Pipeline & GitHub → Vercel Auto Deployment",
+    description:
+      "Building and refining a continuous integration and continuous deployment workflow using GitHub Actions. Every push to the main branch automatically triggers a build and deploys to Vercel — including the site you're looking at right now. Focused on pipeline stages, environment variables, branch protection rules, and preview deployments for pull requests.",
+    tags: ["GitHub Actions", "Vercel", "CI/CD", "Auto Deploy", "Branch Protection", "Preview Deploys"],
+    highlights: [
+      "Automated deploy on every push to main",
+      "Preview deployments for pull requests",
+      "Environment variable management across stages",
+    ],
+  },
+  {
+    num: "02",
+    name: "Docker Desktop — Images & Container Workflows",
+    description:
+      "Learning containerization fundamentals using Docker Desktop. Writing Dockerfiles to build custom images, spinning up containers for local development, and understanding the relationship between images, containers, volumes, and networking. Goal is to containerize applications and achieve dev/prod environment parity.",
+    tags: ["Docker", "Dockerfile", "Containers", "Docker Desktop", "Images", "Volumes"],
+    highlights: [
+      "Building custom images from Dockerfiles",
+      "Running and managing containers locally",
+      "Exploring volumes and container networking",
+    ],
+  },
+];
+
 export default function ProjectsPage() {
   return (
     <main className="projects-page">
@@ -47,6 +74,7 @@ export default function ProjectsPage() {
         </p>
       </section>
 
+      {/* Past Projects */}
       <section className="projects-list">
         {projects.map((project) => (
           <article key={project.num} className="project-item">
@@ -70,6 +98,49 @@ export default function ProjectsPage() {
             </div>
           </article>
         ))}
+      </section>
+
+      {/* DevOps Learning Section */}
+      <section className="devops-section">
+        <div className="devops-header">
+          <p className="eyebrow">Currently Learning</p>
+          <h2 className="devops-title">Leveling Up → DevOps</h2>
+          <p className="page-sub">
+            Actively building DevOps skills to complement my full-stack background.
+            These are skills I&apos;m turning into muscle memory.
+          </p>
+        </div>
+
+        <div className="projects-list">
+          {devopsProjects.map((project) => (
+            <article key={project.num} className="project-item">
+              <div className="project-meta">
+                <span className="project-num">{project.num}</span>
+                <span className="devops-status">In Progress</span>
+              </div>
+              <div className="project-content">
+                <h3 className="project-name">{project.name}</h3>
+                <p className="project-description">{project.description}</p>
+                <ul className="devops-highlights">
+                  {project.highlights.map((h) => (
+                    <li key={h} className="devops-highlight-item">
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+                <div className="project-footer">
+                  <div className="project-tags">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
 
       <style>{`
@@ -208,6 +279,62 @@ export default function ProjectsPage() {
           opacity: 0.8;
         }
 
+        /* ── DevOps Section ── */
+        .devops-section {
+          margin-top: 5rem;
+        }
+
+        .devops-header {
+          padding-bottom: 2rem;
+          border-bottom: 1px solid #1e1e1e;
+        }
+
+        .devops-title {
+          font-size: clamp(24px, 4vw, 36px);
+          font-weight: 300;
+          letter-spacing: -0.04em;
+          line-height: 1.05;
+          color: #e8e8e0;
+          margin: 0 0 1rem;
+        }
+
+        .devops-status {
+          font-family: "Space Mono", monospace;
+          font-size: 9px;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: #0d0d0d;
+          background-color: #c8f55a;
+          padding: 3px 7px;
+          border-radius: 2px;
+          width: fit-content;
+        }
+
+        .devops-highlights {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 0.3rem;
+        }
+
+        .devops-highlight-item {
+          font-family: "Space Mono", monospace;
+          font-size: 11px;
+          color: #555;
+          padding-left: 1.25rem;
+          position: relative;
+          line-height: 1.6;
+        }
+
+        .devops-highlight-item::before {
+          content: "→";
+          position: absolute;
+          left: 0;
+          color: #c8f55a;
+        }
+
         /* ── Responsive ── */
         @media (max-width: 640px) {
           .projects-page {
@@ -222,6 +349,7 @@ export default function ProjectsPage() {
           .project-meta {
             flex-direction: row;
             gap: 1rem;
+            align-items: center;
           }
 
           .project-footer {
